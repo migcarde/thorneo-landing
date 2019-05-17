@@ -1,0 +1,267 @@
+
+@import url('https://fonts.googleapis.com/css?family=Gentium+Book+Basic|Montserrat+Alternates');
+
+html, body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        width: 100%;
+}
+
+.header {
+  overflow: hidden;
+  background-color: #fcfcfc;
+  padding: 20px 10px;
+}
+
+.header a {
+  float: left;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  line-height: 25px;
+  font-size: 150%;
+  font-family: 'Montserrat+Alternates', sans-serif;
+  color:  #2C709C;
+  border: 2px solid  #2C709C;
+  background: rgb(221, 243, 255);
+  border-radius: 3px;
+  margin: 5px;
+}
+
+.header a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.header a.active {
+  background-color: dodgerblue;
+  color: white;
+}
+
+.header-right {
+  float: right;
+}
+
+@media screen and (max-width: 500px) {
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+    
+  }
+  
+  .header-right {
+    float: none;
+  }
+}
+  
+/* Large */
+.header-right {
+  top: 0;
+  display: flex;
+  flex-flow: row wrap;
+  /* This aligns items to the end line on main-axis */
+  justify-content: flex-end;
+
+  
+}
+
+/* Medium screens */
+@media all and (max-width: 800px) {
+  .header-right {
+    /* When on medium sized screens, we center it by evenly distributing empty space around items */
+    justify-content: space-around;
+  }
+}
+
+/* Small screens */
+@media all and (max-width: 500px) {
+  .header-right {
+    /* On small screens, we are no longer using row direction but column */
+    flex-direction: column;
+  }
+}
+
+.btn{
+  font-size: 150%;
+  font-family: 'Montserrat+Alternates', sans-serif;
+  text-decoration: none;
+  color:  #2C709C;
+  border: 2px solid  #2C709C;
+  background: rgb(221, 243, 255);
+  padding: 10px 10px;
+
+  border-radius: 5px;
+}
+
+p {
+  font-family: 'Montserrat+Alternates', sans-serif;
+  font-size: 120%;
+  line-height: 190%;
+  text-align: justify;
+  margin: 3%;
+}
+
+
+.intro{
+    height: 90%;
+    width: 100%;
+    margin: auto;
+    background: #ffffff;
+    background-size: cover;
+    display: table;
+    justify-content: center;
+    /* align horizontal */
+    align-items: center;
+
+}
+  .intro .inner {
+      display: table-cell;
+      vertical-align: middle;
+      text-align: center; 
+  }
+.content {
+    max-width: 500px;
+    margin: auto;
+}
+
+  /* Small screens */
+@media all and (max-width: 500px) {
+  .content img {
+    /* On small screens, we are no longer using row direction but column */
+    width: 50%;
+  }
+}
+
+
+.flex-container {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  
+  -webkit-flex-flow: row wrap;
+  justify-content: space-around;
+}
+  .flex-item {
+    background: #ffffff;;
+    padding: 5px;
+    width: 100%;
+    height: auto;
+    text-align: center;
+  }
+  
+  /* Create two equal columns that sits next to each other */
+  .column {
+    flex: 50%;
+    padding: 10px;
+  }
+
+  .column p{
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  @media (max-width: 500px) {
+    .column {
+      /* On small screens, we are no longer using row direction but column */
+      flex-wrap: wrap;
+      font-size: 80%;
+    }
+  }
+  
+  .section-1 {
+    background-color: #fcfcfc;
+  }
+
+  .section-1 img {
+    width: 40%;
+    height: auto;
+  }
+
+  .section-2 img {
+    width: 40%;
+    height: auto;
+  }
+
+  .section-3 {
+    background-color: #fcfcfc;
+  }
+  .section-3 img{
+    width: 40%;
+    height: auto;
+  }
+  .section-4 img{
+    width: 40%;
+    height: auto;
+  }
+  .section-5 {
+    background-color: #fcfcfc;
+    flex: 10%;
+  }
+
+/* Small screens */
+@media all and (max-width: 500px) {
+  .section-5 img {
+    /* On small screens, we are no longer using row direction but column */
+    width: 75%;
+  }
+  .section-6 img {
+    /* On small screens, we are no longer using row direction but column */
+    width: 75%;
+    flex-wrap: wrap;
+    font-size: 80%;
+  }
+}
+
+
+/* Drop Down Menu */
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+li {
+  float: left;
+}
+
+li a, .dropbtn {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
